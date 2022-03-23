@@ -1,0 +1,34 @@
+package com.testng;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class DataProviderClass {
+	
+		public WebDriver driver;
+		
+		@Test(dataProvider="TestingData")
+		public void testData(String firstName, String lastName, String username) {
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+
+			driver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+			driver.manage().window().maximize();
+			
+			driver.findElement(By.xpath("//*[@id='email']")).sendKeys(firstName);
+			driver.findElement(By.xpath("//*[@id='passwd']")).sendKeys(lastName);
+			driver.findElement(By.xpath("//*[@id='SubmitLogin']")).click();
+		}
+		
+		@DataProvider(name="TestingData")
+		public Object[][] getData(){
+			Object[][] data = {{"abc","xyz"},{"ted","mns"}};
+			return data;
+		}
+
+}
