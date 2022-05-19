@@ -20,10 +20,10 @@ public class RadionButtonClass {
 	
 	static void clickOnRadioButton() throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		driver = new ChromeDriver(); // Open the chrome browser
 		
-		driver.get("https://www.facebook.com/");
-		driver.manage().window().maximize();
+		driver.get("https://www.facebook.com/");  //Open the URL
+		driver.manage().window().maximize(); // Maximize the window
 		
 		driver.findElement(By.xpath("//*[contains(text(), 'Create New Account')]")).click();
 		

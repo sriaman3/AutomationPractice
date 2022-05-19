@@ -25,12 +25,12 @@ public class IframeClass {
 		
 		WebElement ele = driver.findElement(By.id("frame1"));
 		//switch to frame by element
-		driver.switchTo().frame(ele);
+		driver.switchTo().frame(ele);  //interview question
 		String text = driver.findElement(By.id("sampleHeading")).getText();
 		System.out.println(text);
 		
 		//Switching back to the main window
-		driver.switchTo().defaultContent();
+		driver.switchTo().defaultContent(); //interview question
 		driver.findElement(By.xpath("//*[contains(text(),'Forms')]")).click();
 	}
 }

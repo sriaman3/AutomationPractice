@@ -51,6 +51,7 @@ public class CustomListener implements ITestListener {
 		try {
 			FileUtils.copyFile(source, new File(System.getProperty("user.dir") + "\\ScreenShot\\" + result.getName()
 					+ "_" + date + "_" + year + "_" + sec + ".png"));
+			
 		} catch (Exception e) {
 			e.getMessage();
 		}

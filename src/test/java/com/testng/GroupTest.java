@@ -1,5 +1,6 @@
 package com.testng;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class GroupTest {
@@ -7,6 +8,7 @@ public class GroupTest {
 	@Test(groups= {"Smoke"})
 	public void startCar() {
 		System.out.println("Start Car");
+		Assert.fail();
 	}
 	
 	@Test(groups= {"Sanity"})

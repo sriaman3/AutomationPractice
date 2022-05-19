@@ -28,10 +28,9 @@ public class WaitClass {
 		 
 		 WebDriverManager.chromedriver().setup();
 		 driver = new ChromeDriver();
-		 driver.manage().timeouts().implicitlyWait(Duration.ofMillis(100));
 		 driver.manage().window().maximize();
 		 driver.get("https://demoqa.com/alerts");
-		 
+		 driver.manage().timeouts().implicitlyWait(Duration.ofMillis(1000));
 		 driver.findElement(By.xpath("(//*[text()='Click me'])[1]")).click();
 	}
 	 
@@ -55,7 +54,7 @@ public class WaitClass {
 	 //Generic methods
 	 public WebElement explictWait(WebDriver driver1, int time, By element) {
 		 WebDriverWait wait = new WebDriverWait(driver1, Duration.ofSeconds(time));
-		 WebElement elemnt = wait.until(ExpectedConditions.visibilityOfElementLocated(element));
+		 WebElement elemnt = wait.until(ExpectedConditions.presenceOfElementLocated(element));
 		 System.out.println(elemnt.getTagName());
 		 return elemnt;
 	 }

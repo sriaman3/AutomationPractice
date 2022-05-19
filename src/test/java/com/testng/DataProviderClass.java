@@ -13,7 +13,7 @@ public class DataProviderClass {
 		public WebDriver driver;
 		
 		@Test(dataProvider="TestingData")
-		public void testData(String firstName, String lastName, String username) {
+		public void testData(String firstName, String lastName) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 

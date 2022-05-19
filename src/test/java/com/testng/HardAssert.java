@@ -12,16 +12,15 @@ public class HardAssert {
 	@Test
 	public void softAssert(){
 		System.out.println("softAssert Method Was Started");
-		Assert.assertTrue(true);
-		logger.info("This is passed");
+		Assert.assertTrue(false);
 		System.out.println("softAssert Method Was Executed");
 	}
 	
 	@Test
 	public void softAssert1(){
-		System.out.println("softAssert Method Was Started");
-		Assert.assertFalse(true);
-		System.out.println("softAssert Method Was Executed");
+		System.out.println("softAssert1 Method Was Started");
+		Assert.assertFalse(true); 
+		System.out.println("softAssert1 Method Was Executed");
 		
 	}
 

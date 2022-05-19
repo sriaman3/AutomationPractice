@@ -1,7 +1,9 @@
 package com.practice;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -39,7 +41,7 @@ public class ScrollClass {
 		 * To scroll down the web page at the bottom of the page.
 		 */
 		
-		jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		//jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 		
 		//scroll a specific DIV
 		//jse.executeScript("arguments[0].scrollIntoView(true);", ele);

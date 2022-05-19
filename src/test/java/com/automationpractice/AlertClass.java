@@ -60,7 +60,7 @@ public class AlertClass {
 		Thread.sleep(2000);
 
 		Alert alert = driver.switchTo().alert();
-		alert.sendKeys("Aman");
+		alert.sendKeys("Inku");
 		alert.accept();
 
 	}

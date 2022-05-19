@@ -30,6 +30,7 @@ public class DropdownClass {
 		Thread.sleep(3000);
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;  // Narrow Type casting
+		js.executeScript("location.reload(true);"); // Hard refresh
 		js.executeScript("window.scrollBy(0,800)"); //Vertical scroll
 		
 		driver.findElement(By.xpath("(//*[@class=' css-1wa3eu0-placeholder'])[1]")).click();

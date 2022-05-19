@@ -47,11 +47,11 @@ public class DragDropClass {
 		WebElement ele = driver.findElement(By.xpath("//*[text()='Axis Restricted']"));
 		ele.click();
 		
-		WebElement from = driver.findElement(By.xpath("//*[text()='Only X']"));
-		WebElement to = driver.findElement(By.xpath("//*[text()='Only Y']"));
+		WebElement source = driver.findElement(By.xpath("//*[text()='Only X']"));
+		WebElement target = driver.findElement(By.xpath("//*[text()='Only Y']"));
 		
 		Actions act= new Actions(driver);
-		act.dragAndDrop(from, to).build().perform();
+		act.dragAndDrop(source, target).build().perform();
 		
 	}
 }

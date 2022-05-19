@@ -1,13 +1,12 @@
 package com.testng;
 
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class AssertionClass {
 	
-	SoftAssert softAssertion= new SoftAssert();
+	SoftAssert softAssertion; 
 	@BeforeTest
 	public void test() {
 		System.out.println("Hello");
@@ -15,7 +14,7 @@ public class AssertionClass {
 	
 	@Test
 	public void verifyLoginFunctionality(){
-		
+		softAssertion =  new SoftAssert();
 		System.out.println("softAssert Method Was Started");
 		softAssertion.assertTrue(true);
 		System.out.println("Verification of the login functionly is passed");
@@ -25,15 +24,11 @@ public class AssertionClass {
 	
 	@Test
 	public void softAssert1(){
-		
+		softAssertion =  new SoftAssert();
 		System.out.println("softAssert Method Was Started");
-		softAssertion.assertFalse(true);
+		softAssertion.assertFalse(false);
 		System.out.println("softAssert Method Was Executed");
 		softAssertion.assertAll();
 	}
-	
-	@AfterTest
-	public void aftertest() {
-		softAssertion.assertAll();
-	}
+
 }

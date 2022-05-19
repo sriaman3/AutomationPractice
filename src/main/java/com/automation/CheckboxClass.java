@@ -1,20 +1,24 @@
 package com.automation;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class CheckboxClass {
+	
 	
 	
 	public static void main(String[] args) {
 		
-		String str = "JavaSelenium";
 		
-		for(int i=0; i<=str.length();i++) {
-			if(i%2!=0) {
-				System.out.println(str.charAt(i));
-			}
-		}
-		
+		  WebDriver driver = WebDriverManager.chromedriver().create();
+		  driver.get("http://automationpractice.com/index.php");
+		 
 	}
+		
 	
-	
-	
+
+
 }

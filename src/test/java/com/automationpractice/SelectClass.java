@@ -34,9 +34,9 @@ public class SelectClass {
 		WebElement ele =  driver.findElement(By.xpath("//*[@id='selectProductSort']"));
 		Select select = new Select(ele);
 		
-		select.selectByIndex(1);
-		select.selectByValue("reference:asc");
-		select.selectByVisibleText("Product Name: A to Z");
+		//select.selectByIndex(1);
+		//select.selectByValue("reference:asc");
+		//select.selectByVisibleText("Product Name: A to Z");
 	}
 	
 	/*

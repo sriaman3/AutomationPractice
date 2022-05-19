@@ -21,16 +21,15 @@ public class TooltipClass {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		
-		driver.get("https://demoqa.com/tool-tips");
+		driver.get("http://automationpractice.com/index.php?id_category=10&controller=category#/");
 		driver.manage().window().maximize();
 		Thread.sleep(2000);
-		WebElement ele = driver.findElement(By.xpath("//*[text()='Hover me to see']"));
-		
+		WebElement ele = driver.findElement(By.xpath("(//*[text()='Dresses'])[2]"));
+		//RelativeLocator.with(By.tagName("")).above(ele);
 		Actions act = new Actions(driver);
 		act.moveToElement(ele).build().perform(); // Mouse Hover
 		
-		Thread.sleep(3000);
-		String tooltip = driver.findElement(By.xpath("//*[@class='tooltip-inner']")).getText();
+		String tooltip = driver.findElement(By.xpath("(//*[text()='Casual Dresses'])[2]")).getText();
 		System.out.println(tooltip);
 	}
 	

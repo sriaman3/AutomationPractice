@@ -30,6 +30,7 @@ public class WebTable {
 		driver.manage().window().maximize();
 		List<WebElement> ele = driver.findElements(By.xpath("//*[@class='dataTable']/thead/tr/th"));
 		System.out.println(ele.size());
+		
 		for(WebElement ele1 :ele) {
 			System.out.println(ele1.getText());
 		}
@@ -48,8 +49,6 @@ public class WebTable {
 		
 		List<WebElement> row = driver.findElements(By.xpath("//*[@class='dataTable']/tbody/tr"));
 		System.out.println(row.size());
-		
-		
 	}
 	
 	public void getRowPosition(String str) throws InterruptedException {
@@ -93,13 +92,13 @@ public class WebTable {
 		
 		List<WebElement> th = driver.findElements(By.xpath("//*[@class='dataTable']/thead/tr/th"));
 		
-		List<WebElement> ele = driver.findElements(By.xpath("//*[@class='dataTable']/tbody/tr/td"));
+		List<WebElement> cells = driver.findElements(By.xpath("//*[@class='dataTable']/tbody/tr/td"));
 		
 		List<WebElement> row = driver.findElements(By.xpath("//*[@class='dataTable']/tbody/tr"));
 		
-		for (int i = 1; i <= row.size(); i++) {
+		for (int i = 1; i <= row.size(); i++) {  //row
 
-			   for (int j = 1; j <= ele.size(); j++) {
+			   for (int j = 1; j <= cells.size(); j++) {  //cells
 				   if(j<=th.size()) {
 				   System.out.print("  "+ driver.findElement(By.xpath("//*[@class='dataTable']/tbody/tr["+i+"]/td["+j+"]")).getText());
 				   }

@@ -9,12 +9,12 @@ import com.exceloperation.BaseClass;
 
 public class LoginPageTest extends BaseClass {
 	
-	LoginPageObjectClass loginobject;
+	//LoginPageObjectClass login;
 	POMFactoryClass login;
-	//BeforeMethod
+	//@BeforeMethod
 	@BeforeTest
 	public void initialize() {
-		//loginobject = new LoginPageObjectClass(driver);
+		//login = new LoginPageObjectClass(driver);
 		login = new POMFactoryClass(driver);
 	}
 	
@@ -22,6 +22,7 @@ public class LoginPageTest extends BaseClass {
 	public void validateLoginUrl() {
 		Assert.assertEquals(login.validateUrl(), prop.getProperty("url"));
 		test = extent.createTest("validateLoginUrl").log(Status.PASS, "able to match the URL");
+		Assert.assertEquals("A", "B");
 		//test.info("Matching the URL");
 		
 	}
@@ -30,6 +31,7 @@ public class LoginPageTest extends BaseClass {
 	public void loginTest() {
 		login.login(prop.getProperty("username"), prop.getProperty("password"));
 		test = extent.createTest("loginTest").log(Status.FAIL, "not able to login");
+		Assert.assertEquals("A", "B");
 	}
 
 }

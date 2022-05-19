@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class LoginPageObjectClass {
-	WebDriver driver;
+	WebDriver driver; //Instance variable
 	//Basic Approach
 	By username = By.xpath("//*[@id='email']");
 	By password = By.xpath("//*[@id='passwd']");

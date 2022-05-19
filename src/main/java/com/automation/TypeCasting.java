@@ -3,7 +3,7 @@ package com.automation;
 public class TypeCasting {
 	
 	public static void main(String args[]) {
-		TypeCasting.narrowTypeCast();
+		TypeCasting.widenTypeCast();
 	}
 	
 	
